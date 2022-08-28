@@ -17,3 +17,10 @@ namespace BulkyBookWeb.Models.Data
 }
 
 ```
+
+# how to handle complex resource in ASP.NET core MVC?
+
+- url is like this in ASP.NET core
+  ```
+    domain/Controller/Action
+  ```
