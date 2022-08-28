@@ -19,3 +19,20 @@
     ```
 
 - add `connectionString` to access database
+- add `ApplicationDbContext` class
+  - add `Entity Framework Core` package
+    - select project
+    - open mouse menu
+    - select `Manage MuGet Packages`
+    - search for `entity framework core`
+  - add `Entity Framework Core SQL server` package too
+    - search `sql server`
+  - add `Data` folder to project root
+    - add `ApplicationDbContext` class
+      - extend `DbContext`
+        - to access database
+      - add `Category` class
+        - to create table
+        ```
+        public DbSet<Category> Category { get; set; }
+        ```
