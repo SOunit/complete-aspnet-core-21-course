@@ -36,3 +36,16 @@
         ```
         public DbSet<Category> Category { get; set; }
         ```
+- add database connection logic to `Program.cs`
+  ```
+  builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    ));
+  ```
+- add constructor to `ApplicationDbContext` class
+- crate migration file
+  - install `tools` package
+  - go to `tools/MuGetPackageManager/console`
+  - `add-migration AddCategoryToDb`
+- update database
+  `update-database` in console
